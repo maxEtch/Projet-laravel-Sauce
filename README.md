@@ -1,20 +1,13 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
-
-## Descriptiob
+## Description
 
 Ce projet est un blog développé avec le framework Laravel dans le but de prendre en main ses principales fonctionnalités. L'application permet aux utilisateurs de :
 
-Créer un compte et se connecter
-Ajouter, modifier et supprimer des sauces
-Gérer leur profil utilisateur
-Voir tous les articles
+Créer un compte et se connecter </br>
+Ajouter, modifier et supprimer des sauces</br>
+Gérer leur profil utilisateur</br>
+Voir tous les articles</br>
 
 ## Fonctionnalités non implémentées (Cause d'erreurs redondantes non résolues):
 Gestion de like/dislike : Pas assez de temps pour corriger cette partie
