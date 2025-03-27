@@ -1,5 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-<p align="center"><a href="https://www.iutbayonne.univ-pau.fr" target="_blank"><img src="https://www.iutbayonne.univ-pau.fr/sites/default/files/logo_iut_w_alpha_mh_wm_def.png"
+<p align="center"><a href="https://www.iutbayonne.univ-pau.fr" target="_blank"><img src="https://www.iutbayonne.univ-pau.fr/sites/default/files/logo_iut_w_alpha_mh_wm_def.png" width="200" alt="IUT Logo"></a></p>
+
 ## Description
 
 Ce projet est un blog développé avec le framework Laravel dans le but de prendre en main ses principales fonctionnalités. L'application permet aux utilisateurs de :
