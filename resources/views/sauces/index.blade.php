@@ -32,18 +32,35 @@
                                 <p><strong>Description :</strong> {{ $sauce->description }}</p>
                                 <p><strong>Niveau de piment :</strong> {{ $sauce->heat }}/10</p>
 
-                                <div class="flex justify-between mt-4">
-                                    <a href="{{ route('sauces.edit', $sauce) }}" class="bg-yellow-500 text-white px-3 py-1 rounded">
-                                        Modifier
-                                    </a>
+                                <div class="flex justify-between items-center mt-4">
+                                    <div class="flex space-x-2">
+                                        <form action="{{ route('sauces.like', $sauce) }}" method="POST" class="inline-block">
+                                            @csrf
+                                            <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded flex items-center">
+                                                👍 {{ $sauce->likes }}
+                                            </button>
+                                        </form>
+                                        <form action="{{ route('sauces.dislike', $sauce) }}" method="POST" class="inline-block">
+                                            @csrf
+                                            <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded flex items-center">
+                                                👎 {{ $sauce->dislikes }}
+                                            </button>
+                                        </form>
+                                    </div>
 
-                                    <form action="{{ route('sauces.destroy', $sauce) }}" method="POST" class="inline-block">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded" onclick="return confirm('Êtes-vous sûr ?')">
-                                            Supprimer
-                                        </button>
-                                    </form>
+                                    <div class="flex space-x-2">
+                                        <a href="{{ route('sauces.edit', $sauce) }}" class="bg-yellow-500 text-white px-3 py-1 rounded">
+                                            Modifier
+                                        </a>
+
+                                        <form action="{{ route('sauces.destroy', $sauce) }}" method="POST" class="inline-block">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded" onclick="return confirm('Êtes-vous sûr ?')">
+                                                Supprimer
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         @endforeach
@@ -53,4 +70,3 @@
         </div>
     </div>
 </x-app-layout>
-

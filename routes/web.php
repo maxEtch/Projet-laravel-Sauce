@@ -2,6 +2,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SauceController;
+use App\Http\Controllers\SauceLikeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,6 +16,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::post('/sauces/{sauce}/like', [SauceLikeController::class, 'like'])->name('sauces.like');
+    Route::post('/sauces/{sauce}/dislike', [SauceLikeController::class, 'dislike'])->name('sauces.dislike');
 
     // Toutes les routes des sauces
     Route::get('/sauces', [SauceController::class, 'index'])->name('sauces.index');
