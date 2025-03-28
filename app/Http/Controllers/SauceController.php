@@ -110,10 +110,9 @@ class SauceController extends Controller
             $imagePath = str_replace('/storage/', '', $sauce->imageUrl);
             Storage::disk('public')->delete($imagePath);
         }
-    
+
         $sauce->delete();
         return redirect()->route('sauces.index')->with('success', 'Sauce supprimée');
     }
 
-    
 }
