@@ -1,13 +1,8 @@
 <x-app-layout>
     <x-slot name="header">
-        <div class="flex flex-col">
-            <h2 class="font-semibold text-2xl text-gray-800 leading-tight">
-                {{ __('Créer une nouvelle sauce') }}
-            </h2>
-            <p class="text-sm text-gray-600 mt-1">
-                Ajoutez une nouvelle sauce à votre collection
-            </p>
-        </div>
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Mes Sauces') }}
+        </h2>
     </x-slot>
 
     <div class="py-12">
@@ -28,20 +23,20 @@
                         @foreach($sauces as $sauce)
                             <div class="border rounded-lg p-4 shadow-md">
                                 <h2 class="text-xl font-bold mb-2">{{ $sauce->name }}</h2>
-                                
+
                                 @if($sauce->imageUrl)
                                     <img src="{{ $sauce->imageUrl }}" alt="{{ $sauce->name }}" class="w-full h-48 object-cover rounded mb-4">
                                 @endif
-                                
+
                                 <p><strong>Fabricant :</strong> {{ $sauce->manufacturer }}</p>
                                 <p><strong>Description :</strong> {{ $sauce->description }}</p>
                                 <p><strong>Niveau de piment :</strong> {{ $sauce->heat }}/10</p>
-                                
+
                                 <div class="flex justify-between mt-4">
                                     <a href="{{ route('sauces.edit', $sauce) }}" class="bg-yellow-500 text-white px-3 py-1 rounded">
                                         Modifier
                                     </a>
-                                    
+
                                     <form action="{{ route('sauces.destroy', $sauce) }}" method="POST" class="inline-block">
                                         @csrf
                                         @method('DELETE')
@@ -58,3 +53,4 @@
         </div>
     </div>
 </x-app-layout>
+
